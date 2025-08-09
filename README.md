@@ -1,2 +1,2 @@
-# Calculator
-1st project! :) 
+# Basic Calculator
+Building a basic calculator :) 
