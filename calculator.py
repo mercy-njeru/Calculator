@@ -66,6 +66,7 @@ def button_clicked(value):
 
         elif value == "( )":
             pass
+
         elif value == "%":
             result = float(label["text"]) / 100
             label["text"] = remove_decimal_zero(result)
@@ -73,7 +74,7 @@ def button_clicked(value):
     elif value in side_row:
         if value == "=":
             if number1 is not None and operator is not None:
-                number2 = label["text"]
+                number2 = label["text"].split(operator)[-1].strip()
                 numnumber1 = float(number1)
                 numnumber2 = float(number2)
 
@@ -92,7 +93,8 @@ def button_clicked(value):
             if operator is None:
                 number1 = label["text"]
                 operator = value
-                label["text"] = "0"
+                number2 = label["text"]
+                label["text"] =number1 + " " + operator + " "
 
 
 
